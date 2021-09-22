@@ -21,7 +21,7 @@ export = {
             const userid = args[0];
             const guildmember = await member.guild.members.fetch(userid);
 
-            await message.channel.send((await play('fart reverb', guildmember, message.channel)).content);
+            await message.channel.send((await play('fart reverb reversed', guildmember, message.channel)).content);
         }
         catch (e) {
             logger.error(e);
