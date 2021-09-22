@@ -7,7 +7,7 @@ export = {
     name: 'stop',
     aliases: ['clear'],
     type: CommandType.NORMAL,
-    category: 'DJ Goofy',
+    category: 'Awtter Music',
     description: 'Stops the current playlist.',
     run: async ({ message, member }: CallbackOptions) => {
 

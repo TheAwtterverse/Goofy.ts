@@ -7,7 +7,7 @@ export = {
     name: 'shuffle',
     aliases: ['s'],
     type: CommandType.NORMAL,
-    category: 'DJ Goofy',
+    category: 'Awtter Music',
     description: 'Shuffles the current playlist.',
     run: async ({ message, member }: CallbackOptions) => {
 

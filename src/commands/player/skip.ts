@@ -7,7 +7,7 @@ export = {
     name: 'skip',
     aliases: ['next'],
     type: CommandType.NORMAL,
-    category: 'DJ Goofy',
+    category: 'Awtter Music',
     description: 'Skips the current song.',
     run: async ({ message, member }: CallbackOptions) => {
 

@@ -6,7 +6,7 @@ import logger from '../../core/logger';
 export = {
     name: 'pause',
     type: CommandType.NORMAL,
-    category: 'DJ Goofy',
+    category: 'Awtter Music',
     description: 'Pauses the current playlist.',
     run: async ({ message, member }: CallbackOptions) => {
 

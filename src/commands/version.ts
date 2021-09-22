@@ -3,7 +3,7 @@ import { CallbackOptions } from '../interfaces/CallbackOptions';
 import { VERSION } from '../version';
 
 const generateReplyText = (numGuilds: number) => {
-    return `DJ Goofy version \`${VERSION}\` by AlexOttr#3000. uwu.`;
+    return `Awtter Music Bot version \`${VERSION}\` by AlexOttr#3000. uwu.`;
 };
 
 export = {

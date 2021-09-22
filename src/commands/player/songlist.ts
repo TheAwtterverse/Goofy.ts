@@ -6,7 +6,7 @@ import logger from '../../core/logger';
 export = {
     name: 'queue',
     type: CommandType.NORMAL,
-    category: 'DJ Goofy',
+    category: 'Awtter Music',
     description: 'Displays the full queue.',
     run: async ({ message, member }: CallbackOptions) => {
 

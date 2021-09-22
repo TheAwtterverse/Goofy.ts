@@ -4,12 +4,13 @@ import { play } from '../../mods/player';
 import logger from '../../core/logger';
 
 export = {
-    name: 'play',
-    aliases: ['p'],
+    name: 'fart',
+    aliases: ['shade', 'stimk'],
     type: CommandType.NORMAL,
     category: 'Awtter Music',
-    expectedArgs: '<link | song name>',
-    description: 'Plays a song or a playlist.',
+    expectedArgs: '<userid>',
+    description: 'Stimks at user.',
+    permissions: ['ADMINISTRATOR'],
     minArgs: 1,
     run: async ({ message, member, args }: CallbackOptions) => {
 
@@ -17,7 +18,10 @@ export = {
         if (!args) return;
         if (args?.length === 0) return;
         try {
-            await message.channel.send((await play(args.join(' '), member, message.channel)).content);
+            const userid = args[0];
+            const guildmember = await member.guild.members.fetch(userid);
+
+            await message.channel.send((await play('fart reverb', guildmember, message.channel)).content);
         }
         catch (e) {
             logger.error(e);
