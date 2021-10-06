@@ -26,6 +26,13 @@ export class Kevin {
         run: () => {},
     };
 
+    private dummyCommand: Command = {
+        name: '',
+        category: '',
+        description: '',
+        run: () => {},
+    };
+
     /**
      * Create a new Kevin command handler instance
      * @param {Client} client Bot client instance
@@ -262,7 +269,7 @@ export class Kevin {
             // get the command name
             const cmd = args.shift()!.toLowerCase().replace(this.prefix, '');
 
-            let command = this.helpCommand;
+            let command = this.dummyCommand;
             this.commands.forEach((eeeee) => {
 
                 if (eeeee.name === cmd || eeeee.aliases?.includes(cmd)) {
@@ -270,6 +277,7 @@ export class Kevin {
                     return;
                 }
             });
+            if (command === this.dummyCommand) return;
             // command not found
             if (command.name === this.helpCommand.name) {
                 this.help(channel, member);
