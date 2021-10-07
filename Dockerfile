@@ -4,8 +4,7 @@ FROM node:alpine AS BUILD_IMAGE
 RUN apk update && apk add curl bash && rm -rf /var/cache/apk/* && curl -sfL https://install.goreleaser.com/github.com/tj/node-prune.sh | bash -s -- -b /usr/local/bin
 
 WORKDIR /usr/src/lexbot
-RUN apk add --update python make g++\
-   && rm -rf /var/cache/apk/*
+RUN apk add --update --no-cache curl py-pip
 COPY package.json ./
 
 RUN npm install
