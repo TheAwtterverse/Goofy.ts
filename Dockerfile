@@ -5,6 +5,7 @@ RUN apk update && apk add curl bash && rm -rf /var/cache/apk/* && curl -sfL http
 
 WORKDIR /usr/src/lexbot
 RUN apk --no-cache add --virtual builds-deps build-base python3
+RUN ln -s /usr/bin/python3 /usr/bin/python
 COPY package.json ./
 
 RUN npm install
@@ -27,6 +28,7 @@ RUN apk update && apk add ffmpeg && rm -rf /var/cache/apk/*
 
 COPY package.json ./
 RUN apk --no-cache add --virtual builds-deps build-base python3
+RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN npm install --production
 COPY --from=BUILD_IMAGE /usr/src/lexbot/dist ./dist
 
